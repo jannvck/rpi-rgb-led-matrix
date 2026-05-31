@@ -37,7 +37,7 @@ TARGET=librgbmatrix
 #   regular-pi1        # If you have an old Pi1 and regular didn't work.
 #   classic            # (deprecated) Classic Pi1/2/. Not used anymore.
 #   classic-pi1        # (deprecated) Classic pinout on Rasperry Pi 1
-HARDWARE_DESC?=regular
+HARDWARE_DESC?=adafruit-hat-pwm
 
 # If you see that your display is inverse, you might have a matrix variant
 # has uses inverse logic for the RGB bits. In that case: uncomment this.
@@ -69,7 +69,7 @@ HARDWARE_DESC?=regular
 # typically should double check cables and add TTL level converter if you
 # haven't.
 # Flag: --led-slowdown-gpio
-#DEFINES+=-DRGB_SLOWDOWN_GPIO=1
+DEFINES+=-DRGB_SLOWDOWN_GPIO=2
 
 # This allows to change the base time-unit for the on-time in the lowest
 # significant bit in nanoseconds.
@@ -90,7 +90,7 @@ HARDWARE_DESC?=regular
 # If you want to tweak, watch the framerate (-DSHOW_FRAME_RATE) while playing
 # with this number and the PWM values.
 # Flag: --led-pwm-lsb-nanoseconds
-#DEFINES+=-DLSB_PWM_NANOSECONDS=130
+DEFINES+=-DLSB_PWM_NANOSECONDS=130
 
 # This is to debug problems with the hardware pulse generation. The PWM hardware
 # module is also used by Raspberry Pi sound system, so there might be
@@ -158,7 +158,7 @@ HARDWARE_DESC?=regular
 # close together.
 # Then you can set the flag --led-gpio-mapping=adafruit-hat-pwm
 # .. or uncomment the following line.
-#HARDWARE_DESC=adafruit-hat-pwm
+HARDWARE_DESC=adafruit-hat-pwm
 
 # Typically, a Hub75 panel is split in two half displays, so that a 1:16
 # multiplexing actually multiplexes over two half displays and gives 32 lines.
