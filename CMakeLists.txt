@@ -41,9 +41,7 @@ set(RGBMATRIX_SOURCES
     ${RGBMATRIX_SOURCE_DIR}/multiplex-mappers.cc
     ${RGBMATRIX_SOURCE_DIR}/options-initialize.cc
     ${RGBMATRIX_SOURCE_DIR}/pixel-mapper.cc
-    ${RGBMATRIX_SOURCE_DIR}/rp1/rp1_pio_backend.cc
-    ${RGBMATRIX_SOURCE_DIR}/rp1/rp1_pio_support.c
-    ${RGBMATRIX_SOURCE_DIR}/rp1/rp1_rio_backend.cc
+    ${RGBMATRIX_SOURCE_DIR}/rp1/rp1_stub_backend.cc
     ${RGBMATRIX_SOURCE_DIR}/thread.cc
 )
 cmake_print_variables(RGBMATRIX_SOURCES)
